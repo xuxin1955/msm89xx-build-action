@@ -25,3 +25,6 @@ wget https://github.com/Haris131/uz801v3-kernel/commit/fabdd0494c48f7c86ebf63f96
 wget https://github.com/Haris131/uz801v3-kernel/commit/55fad55a0f18517d02d66003b5ec70975d46accb.patch -O target/linux/msm89xx/patches-6.1/0097-fix-led-msm8916.patch
 wget https://github.com/Haris131/uz801v3-kernel/commit/55fad55a0f18517d02d66003b5ec70975d46accb.patch -O target/linux/msm89xx/patches-6.6/0097-fix-led-msm8916.patch
 wget https://github.com/Haris131/uz801v3-kernel/commit/55fad55a0f18517d02d66003b5ec70975d46accb.patch -O target/linux/msm89xx/patches-6.12/0097-fix-led-msm8916.patch
+
+# HelmiWrt packages
+git clone --depth=1 https://github.com/Haris131/helmiwrt-packages package/community
