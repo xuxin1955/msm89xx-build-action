@@ -20,6 +20,10 @@ on:
         description: 'SSH connection to Actions'
         required: true
         default: 'true'
+        type: choice
+        options:
+          - true
+          - false
 
 env:
   REPO_URL: https://github.com/lkiuyu/immortalwrt
