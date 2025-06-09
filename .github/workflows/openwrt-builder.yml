@@ -24,10 +24,16 @@ on:
         options:
           - true
           - false
+      source:
+        type: choice
+        description: Select Source.
+        required: true
+        default: openwrt
+        options:
+        - openwrt
+        - immortalwrt
 
 env:
-  REPO_URL: https://github.com/lkiuyu/immortalwrt
-  REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: .config_small
   DIY_P1_SH: diy-part1.sh
@@ -63,7 +69,12 @@ jobs:
       working-directory: /workdir
       run: |
         df -hT $PWD
-        git clone $REPO_URL -b $REPO_BRANCH openwrt
+        if [ ${{ inputs.source }} == 'openwrt' ]; then
+          REPO_URL='https://github.com/lkiuyu/openwrt-ufi'
+        elif [ ${{ inputs.source }} == 'immortalwrt' ]; then
+          REPO_URL='https://github.com/lkiuyu/immortalwrt'
+        fi
+        git clone --depth=1 $REPO_URL openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
 
     - name: Load custom feeds
