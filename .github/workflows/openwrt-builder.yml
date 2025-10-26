@@ -22,8 +22,8 @@ on:
         default: 'true'
         type: choice
         options:
-          - true
-          - false
+           - true
+            - false
       source:
         type: choice
         description: Select Source.
