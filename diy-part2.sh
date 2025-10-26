@@ -14,7 +14,7 @@
 sed -i 's/192.168.1.1/192.168.100.1/g' package/base-files/files/bin/config_generate
 
 # Modify default theme
-sed -i 's/luci-theme-bootstrap/luci-theme-material/g' feeds/luci/collections/luci/Makefile
+sed -i 's/luci-theme-material/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 
 # Patch OverClock
 wget https://github.com/Haris131/uz801v3-kernel/commit/fabdd0494c48f7c86ebf63f96e2a8c213ecdb96c.patch -O target/linux/msm89xx/patches-6.1/0096-overclock-msm8916.patch
