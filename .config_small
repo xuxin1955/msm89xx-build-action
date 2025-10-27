@@ -631,7 +631,7 @@ CONFIG_BUSYBOX_DEFAULT_FEATURE_TAR_GNU_EXTENSIONS=y
 # CONFIG_BUSYBOX_DEFAULT_FEATURE_TAR_UNAME_GNAME is not set
 # CONFIG_BUSYBOX_DEFAULT_FEATURE_TAR_NOPRESERVE_TIME is not set
 # CONFIG_BUSYBOX_DEFAULT_FEATURE_TAR_SELINUX is not set
-# CONFIG_BUSYBOX_DEFAULT_UNZIP is not set
+CONFIG_BUSYBOX_DEFAULT_UNZIP=y
 # CONFIG_BUSYBOX_DEFAULT_FEATURE_UNZIP_CDF is not set
 # CONFIG_BUSYBOX_DEFAULT_FEATURE_UNZIP_BZIP2 is not set
 # CONFIG_BUSYBOX_DEFAULT_FEATURE_UNZIP_LZMA is not set
@@ -1557,7 +1557,7 @@ CONFIG_BUSYBOX_DEFAULT_FEATURE_IPC_SYSLOG_BUFFER_SIZE=0
 # CONFIG_BUSYBOX_DEFAULT_FEATURE_KMSG_SYSLOG is not set
 # CONFIG_PACKAGE_busybox-selinux is not set
 CONFIG_PACKAGE_ca-bundle=y
-# CONFIG_PACKAGE_ca-certificates is not set
+CONFIG_PACKAGE_ca-certificates=m
 # CONFIG_PACKAGE_dnsmasq is not set
 # CONFIG_PACKAGE_dnsmasq-dhcpv6 is not set
 CONFIG_PACKAGE_dnsmasq-full=y
@@ -2824,7 +2824,7 @@ CONFIG_PACKAGE_kmod-slhc=y
 # CONFIG_PACKAGE_kmod-tcp-scalable is not set
 # CONFIG_PACKAGE_kmod-tls is not set
 # CONFIG_PACKAGE_kmod-trelay is not set
-# CONFIG_PACKAGE_kmod-tun is not set
+CONFIG_PACKAGE_kmod-tun=y
 # CONFIG_PACKAGE_kmod-unix-diag is not set
 # CONFIG_PACKAGE_kmod-veth is not set
 # CONFIG_PACKAGE_kmod-vrf is not set
@@ -6947,15 +6947,15 @@ CONFIG_PACKAGE_xray-core=y
 #
 # Compression
 #
-# CONFIG_PACKAGE_7z is not set
+CONFIG_PACKAGE_7z=y
 # CONFIG_PACKAGE_bsdtar is not set
 # CONFIG_PACKAGE_bsdtar-noopenssl is not set
 # CONFIG_PACKAGE_bzip2 is not set
-# CONFIG_PACKAGE_gzip is not set
+CONFIG_PACKAGE_gzip=y
 # CONFIG_PACKAGE_lz4 is not set
 # CONFIG_PACKAGE_pigz is not set
-# CONFIG_PACKAGE_unrar is not set
-# CONFIG_PACKAGE_unzip is not set
+CONFIG_PACKAGE_unrar=y
+CONFIG_PACKAGE_unzip=y
 # CONFIG_PACKAGE_upx is not set
 # CONFIG_PACKAGE_xz-utils is not set
 # CONFIG_PACKAGE_zipcmp is not set
