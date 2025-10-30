@@ -107,9 +107,9 @@ jobs:
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
 
-    - name: 使用ssh连接编译环境，限时15分钟，可在连接后输入命令 `touch /tmp/keepalive` 保活 (Connect to the build environment using ssh)
-      if: ${{inputs.ssh == true}}
+    - name: SSH connection to Actions
       uses: csexton/debugger-action@master
+      if: (github.event.inputs.ssh == 'true' && github.event.inputs.ssh  != 'false') || contains(github.event.action, 'ssh')
 
     - name: 启用ssh生成了.config后在编译前上传配置(Upload config before build)
       if: ${{inputs.multithreading == true}}
@@ -126,8 +126,7 @@ jobs:
       run: |
         cd openwrt
         echo -e "$(nproc) thread compile"
-        if [ ${{ inputs.ssh }} == "false" ]; then
-          make -j$(nproc) || make -j1 || make -j1 V=s
+        make -j$(nproc) || make -j1 || make -j1 V=s
         fi
         echo "status=success" >> $GITHUB_OUTPUT
         grep '^CONFIG_TARGET.*DEVICE.*=y' .config | sed -r 's/.*DEVICE_(.*)=y/\1/' > DEVICE_NAME
