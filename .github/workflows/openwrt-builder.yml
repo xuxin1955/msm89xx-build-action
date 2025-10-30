@@ -111,6 +111,9 @@ jobs:
       uses: csexton/debugger-action@master
       if: (github.event.inputs.ssh == 'true' && github.event.inputs.ssh  != 'false') || contains(github.event.action, 'ssh')
 
+    - name: 查看 openwrt 目录中的文件
+      run: ls -la openwrt/
+
     - name: 启用ssh生成了.config后在编译前上传配置(Upload config before build)
        before build)
       uses: actions/upload-artifact@main
