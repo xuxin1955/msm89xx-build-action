@@ -107,12 +107,11 @@ jobs:
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
 
-    - name: SSH connection to Actions
+    - name: 使用ssh连接编译环境，限时15分钟，可在连接后输入命令 `touch /tmp/keepalive` 保活 (Connect to the build environment using ssh)
+      if: ${{inputs.ssh == true}}
       uses: csexton/debugger-action@master
-      if: (github.event.inputs.ssh == 'true' && github.event.inputs.ssh  != 'false') || contains(github.event.action, 'ssh')
 
     - name: 启用ssh生成了.config后在编译前上传配置(Upload config before build)
-        
       if: ${{inputs.multithreading == true}}
       uses: actions/upload-artifact@v4
       with:
