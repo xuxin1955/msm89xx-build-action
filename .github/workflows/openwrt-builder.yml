@@ -114,13 +114,12 @@ jobs:
     - name: 查看 openwrt 目录中的文件
       run: ls -la openwrt/
 
-    - name: 启用ssh生成了.config后在编译前上传配置(Upload config before build)
-       before build)
+    - name: 启用SSH生成了.config后在编译前上传配置 (Upload config before build)
       uses: actions/upload-artifact@main
       with:
        name: config-before-build
        path: |
-        openwrt/.config_small
+        openwrt/.config
         openwrt/feeds.conf.default
 
     - name: Compile the firmware ${{ inputs.source }}
