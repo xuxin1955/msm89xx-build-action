@@ -117,7 +117,7 @@ jobs:
       with:
        name: config-before-build
        path: |
-        openwrt/.config
+        openwrt/.config_small
         openwrt/feeds.conf.default
 
     - name: Compile the firmware ${{ inputs.source }}
