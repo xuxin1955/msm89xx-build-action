@@ -5102,17 +5102,17 @@ CONFIG_PACKAGE_luci-mod-system=y
 # CONFIG_PACKAGE_luci-app-bitsrunlogin-go is not set
 # CONFIG_PACKAGE_luci-app-bmx7 is not set
 # CONFIG_PACKAGE_luci-app-cd8021x is not set
-CONFIG_PACKAGE_luci-app-chrony=y
+# CONFIG_PACKAGE_luci-app-chrony is not set
 # CONFIG_PACKAGE_luci-app-cifs-mount is not set
 # CONFIG_PACKAGE_luci-app-cjdns is not set
 # CONFIG_PACKAGE_luci-app-clamav is not set
 # CONFIG_PACKAGE_luci-app-cloudflared is not set
 # CONFIG_PACKAGE_luci-app-commands is not set
 # CONFIG_PACKAGE_luci-app-coovachilli is not set
-# CONFIG_PACKAGE_luci-app-cpu-perf is not set
-CONFIG_PACKAGE_luci-app-cpu-status=y
-CONFIG_PACKAGE_luci-app-cpufreq=y
-CONFIG_PACKAGE_luci-app-cpulimit=y
+CONFIG_PACKAGE_luci-app-cpu-perf=y
+# CONFIG_PACKAGE_luci-app-cpu-status is not set
+# CONFIG_PACKAGE_luci-app-cpufreq is not set
+# CONFIG_PACKAGE_luci-app-cpulimit is not set
 # CONFIG_PACKAGE_luci-app-crowdsec-firewall-bouncer is not set
 # CONFIG_PACKAGE_luci-app-csshnpd is not set
 # CONFIG_PACKAGE_luci-app-dawn is not set
@@ -6273,7 +6273,7 @@ CONFIG_PACKAGE_ip-tiny=y
 #
 # Time Synchronization
 #
-CONFIG_PACKAGE_chrony=y
+# CONFIG_PACKAGE_chrony is not set
 # CONFIG_PACKAGE_chrony-nts is not set
 # CONFIG_PACKAGE_htpdate is not set
 # CONFIG_PACKAGE_linuxptp is not set
@@ -7280,7 +7280,7 @@ CONFIG_PACKAGE_ttyd=y
 # CONFIG_PACKAGE_libselinux-validatetrans is not set
 # end of libselinux tools
 
-# CONFIG_PACKAGE_DbusSmsForwardCPlus is not set
+CONFIG_PACKAGE_DbusSmsForwardCPlus=y
 # CONFIG_PACKAGE_ack is not set
 # CONFIG_PACKAGE_acpid is not set
 CONFIG_PACKAGE_adb=y
